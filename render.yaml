@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: beat-addicts-backend
+    env: python
+    plan: starter
+    buildCommand: pip install -r requirements.txt
+    startCommand: python app.py
+    envVars:
+      - key: STRIPE_SECRET
+        value: sk_live_your_real_key
+      - key: PLATINUM_PRICE_ID
+        value: price_1234abcd
